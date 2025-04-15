@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body{
+    height: 900vh;
+    background-color: azure;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    height: 100vh;
+    margin: 0;
+    height: 100vh; /* Para ocupar a altura inteira */
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-start; /* Alinha ao topo, mantendo o conteúdo no topo da tela */
+}
+
+nav.menu-lateral{ /* Configuração do menu lateral*/
+    width: 65px;
+    height: 100%;
+    background-color: #202020;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #7a0a05;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .2s;
+}
+
+nav.menu-lateral.expandir{ /*Configuração do tamanho do menu depois de expandido */
+    width: 300px;
+}
+
+.btn-expandir { /*Configuração do tamanho/espaçamento do botão de expandir */
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i{ /*Configuração de cor/fonte/alteração do cursor do botão de expandir */
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/*Configuração dos itens do menu */
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu{
+    transition: .2s;
+}
+
+/*Quando passar o mouse na opção desejada, vai mudar do preto pro vermelho */
+ul li.ativo{
+    background-color: #7a0a05;
+}
+
+/*Deixar bonitinho do lado*/
+ul li.item-menu:hover{
+    background: #7a0a05;
+}
+
+ul li.item-menu a{ /*Configurando cor/tamanho da fonte dos nomes das opções*/
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+/*Adicionando transição na hora de expandir o menu*/
+ul li.item-menu a .txt-link{
+    margin-left: 50px;
+    transition: .5s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link{
+    margin-left: 30px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 35px;
+    margin-left: 5px;
+}
+
+nav.home{
+    background-color: #202020;
+}
+
+nav.conteudo{
+    margin-left: 75px;
+}
+
+.profile-box {
+    background-color: white;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 80px;
+}
+.profile-box h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.profile-box p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+}
+.profile-box .label {
+    font-weight: bold;
+     color: #555;
+}
+
+.profile-box .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile-box .data-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+
