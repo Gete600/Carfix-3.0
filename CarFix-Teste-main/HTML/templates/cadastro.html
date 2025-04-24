@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/cadastro.css">
+
+    <title>SCadastro CarFix</title>
+</head>
+<body>
+    </div>
+
+    <form action="/cadastrando" method="post">
+        <h1>Cadastro</h1>
+        {% set mensagens = get_flashed_messages() %}
+        {% if mensagens %}
+          <div id="alerta" style="font-size: 20px;">
+            {{mensagens[0]}}
+          </div>
+        {% endif %}
+        <label for="email">E-Mail</label>
+        <input type="email"  class="input-form" name="email" id="email" required>
+        <label for="nome">Username</label>
+        <input type="text" class="input-form" name="nome" id="nome" required>
+        <br>
+      
+        <label for="senha">Senha</label>
+        <input type="password" class="input-form" name="senha" id="senha" required>
+        <br>
+     
+        <label for="confSenha">Confirmar senha</label>
+        <input type="password" class="input-form" name="confirmar_senha" required  id="confSenha">
+        <br>
+        
+       
+       
+
+        <div class="button-container">
+<button type="submit">Cadastrar</button>
+<button><a href="/" style="text-decoration: none;">Login</a></button>
+        </div>
+    </form>
+
+
+
+
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  
+</body>
+</html>

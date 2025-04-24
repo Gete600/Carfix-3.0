@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/login.css">
+  <title>Carfix - Login</title>
+</head>
+<body>
+  <div class="container">
+    <img src="/static/imagens/logo.png" alt="Logo Carfix" class="logo-mobile">
+    <form class="form-box" action="/acesso" method="post">
+      {% set alertas = get_flashed_messages() %}
+      {% if alertas %}
+        <div id="alerta" class="alerta">
+          {{ alertas[0] }}
+        </div>
+      {% endif %}
+
+      <h1>Login</h1>
+
+      <label for="email">E-mail</label>
+      <input type="text" id="email" name="email" placeholder="E-mail" required>
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" placeholder="Senha" required>
+
+      <button type="submit" class="btn">Entrar</button>
+
+      <div class="links">
+        <a href="/cadastro">Criar conta</a>
+        <a href="/verificador">Esqueci minha senha</a>
+      </div>
+    </form>
+  </div>
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+</html>
